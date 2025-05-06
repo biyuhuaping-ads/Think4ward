@@ -201,17 +201,17 @@ struct GameDetailView: View {
             
             // Single game instruction card
             
-                VStack {
-                    GameInstructionCard(
-                        title: title,
-                        description: description,
-                        imageName: imageName,
-                        color: color,
-                        imageAsset: imageAsset,
-                        instructions: getInstructions(for: title)
-                    )
-                    .padding()
-                }
+            VStack {
+                GameInstructionCard(
+                    title: title,
+                    description: description,
+                    imageName: imageName,
+                    color: color,
+                    imageAsset: imageAsset,
+                    instructions: getInstructions(for: title)
+                )
+                .padding()
+            }
             
         }
         .navigationTitle(title)
@@ -379,8 +379,10 @@ struct GameInstructionCard: View {
         )
     }
 }
+
 struct DashboardView: View {
     @State private var animateGradient = false
+    @State private var isNavigateToGames = false
     
     var body: some View {
         NavigationView {
@@ -420,22 +422,28 @@ struct DashboardView: View {
                             .fill(Color.white.opacity(0.15))
                             .frame(width: 170, height: 170)
                         
-
-                             Image("YourGameImageName")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 170, height: 170)
+                        
+                        Image("YourGameImageName")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 170, height: 170)
                     }
                     .padding(.bottom, 20)
                     
                     // Navigation Buttons with depth effect
                     VStack(spacing: 20) {
-                        NavigationLink(destination: GamesView()) {
+                        Button(action: {
+                            showAdIfAvailable()  // 调用广告加载或展示
+                        }) {
                             DashboardButton(
                                 title: "Play Games",
                                 systemImage: "gamecontroller",
                                 gradient: Gradient(colors: [.green, .blue])
                             )
+                        }
+                        
+                        NavigationLink(destination: GamesView(), isActive: $isNavigateToGames) {
+                            EmptyView()
                         }
                         
                         NavigationLink(destination: HowToPlayView()) {
@@ -461,9 +469,16 @@ struct DashboardView: View {
             .navigationBarHidden(true)
         }
     }
+    
+    private func showAdIfAvailable() {
+        print("👉 尝试加载广告或展示广告")
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+            isNavigateToGames = true
+        }
+    }
 }
 
-import SwiftUI
+
 // Enhanced button for dashboard
 struct DashboardButton: View {
     let title: String
@@ -500,8 +515,6 @@ struct DashboardButton: View {
         .shadow(color: Color.black.opacity(0.3), radius: 5, x: 0, y: 3)
     }
 }
-
-import SwiftUI
 
 // Enhanced Games view with professional styling and fixed layout
 struct GamesView: View {
@@ -561,7 +574,7 @@ struct GamesView: View {
                         color: .blue,
                         destination: ConnectFour()
                     )
-                  
+                    
                     EnhancedGameCard(
                         title: "Gomoku",
                         description: "Get 5 in a row to win",
