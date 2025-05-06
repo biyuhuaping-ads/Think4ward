@@ -15,9 +15,12 @@
 		7EE99EB42DB9BAEC006C357E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99EB32DB9BAEC006C357E /* DashboardView.swift */; };
 		7EE99EB62DB9BBA6006C357E /* DotsandBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99EB52DB9BBA6006C357E /* DotsandBoxes.swift */; };
 		7EE99EB82DB9BBCF006C357E /* Gomoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99EB72DB9BBCF006C357E /* Gomoku.swift */; };
+		C2AD6C41637AF8E49B62040D /* libPods-Think4ward.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD86D1C044E7B318C8A8E5E /* libPods-Think4ward.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36C37A8D0A5CD6BC2D7CB089 /* Pods-Think4ward.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think4ward.release.xcconfig"; path = "Target Support Files/Pods-Think4ward/Pods-Think4ward.release.xcconfig"; sourceTree = "<group>"; };
+		5DF9E9577534D72500394C0F /* Pods-Think4ward.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think4ward.debug.xcconfig"; path = "Target Support Files/Pods-Think4ward/Pods-Think4ward.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE99E9C2DB9AF6E006C357E /* Think4ward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Think4ward.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE99E9F2DB9AF6E006C357E /* Think4wardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Think4wardApp.swift; sourceTree = "<group>"; };
 		7EE99EA32DB9AF70006C357E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		7EE99EB32DB9BAEC006C357E /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7EE99EB52DB9BBA6006C357E /* DotsandBoxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsandBoxes.swift; sourceTree = "<group>"; };
 		7EE99EB72DB9BBCF006C357E /* Gomoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gomoku.swift; sourceTree = "<group>"; };
+		EFD86D1C044E7B318C8A8E5E /* libPods-Think4ward.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Think4ward.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,17 +38,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2AD6C41637AF8E49B62040D /* libPods-Think4ward.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		69E8DBFF9F6EEA2D8B5F170C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EFD86D1C044E7B318C8A8E5E /* libPods-Think4ward.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7EE99E932DB9AF6D006C357E = {
 			isa = PBXGroup;
 			children = (
 				7EE99E9E2DB9AF6E006C357E /* Think4ward */,
 				7EE99E9D2DB9AF6E006C357E /* Products */,
+				DE9CDEA914D3973C367FBD25 /* Pods */,
+				69E8DBFF9F6EEA2D8B5F170C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,16 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DE9CDEA914D3973C367FBD25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5DF9E9577534D72500394C0F /* Pods-Think4ward.debug.xcconfig */,
+				36C37A8D0A5CD6BC2D7CB089 /* Pods-Think4ward.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,10 +111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EE99EAA2DB9AF70006C357E /* Build configuration list for PBXNativeTarget "Think4ward" */;
 			buildPhases = (
+				58BED736399CA1E4CA180E7D /* [CP] Check Pods Manifest.lock */,
 				EDBFA8DA8788A6B8FFECDB79 /* Compile Bundle Assets */,
 				7EE99E982DB9AF6E006C357E /* Sources */,
 				7EE99E992DB9AF6E006C357E /* Frameworks */,
 				7EE99E9A2DB9AF6E006C357E /* Resources */,
+				E40ABD491C0D1C80B9D3AA41 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -146,6 +173,45 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		58BED736399CA1E4CA180E7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Think4ward-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E40ABD491C0D1C80B9D3AA41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EDBFA8DA8788A6B8FFECDB79 /* Compile Bundle Assets */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -308,6 +374,7 @@
 		};
 		7EE99EAB2DB9AF70006C357E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DF9E9577534D72500394C0F /* Pods-Think4ward.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -343,6 +410,7 @@
 		};
 		7EE99EAC2DB9AF70006C357E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36C37A8D0A5CD6BC2D7CB089 /* Pods-Think4ward.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
