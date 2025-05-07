@@ -24,6 +24,9 @@ class InterstitialAdVC: UIViewController, MAAdDelegate {
     }
 
     func createInterstitialAd() {
+        // 如果已经有了，就不重复创建
+        if interstitialAd != nil { return }
+        
         interstitialAd = MAInterstitialAd(adUnitIdentifier: "f02123778ef3074f")
         interstitialAd.delegate = self
         interstitialAd.load()
