@@ -91,6 +91,7 @@ struct HowToPlayView: View {
         }
     }
 }
+
 // Compact card for the instruction overview screen
 struct CompactInstructionCard: View {
     let title: String
@@ -175,6 +176,7 @@ struct CompactInstructionCard: View {
         }
     }
 }
+
 // Updated Game Detail View with image support
 struct GameDetailView: View {
     let title: String
@@ -262,6 +264,7 @@ struct GameDetailView: View {
         }
     }
 }
+
 // Update the existing GameInstructionCard to support images
 struct GameInstructionCard: View {
     let title: String
@@ -384,6 +387,10 @@ struct DashboardView: View {
     @State private var animateGradient = false
     @State private var isNavigateToGames = false
     
+    init() {
+        InterstitialAdVC.shared
+    }
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -471,13 +478,14 @@ struct DashboardView: View {
     }
     
     private func showAdIfAvailable() {
-        print("👉 尝试加载广告或展示广告")
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(5)) {
+        print("👉 加载/展示广告")
+        let adVC = InterstitialAdVC.shared
+        adVC.showAdIfAvailable()
+        adVC.onAdClick = {
             isNavigateToGames = true
         }
     }
 }
-
 
 // Enhanced button for dashboard
 struct DashboardButton: View {

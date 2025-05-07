@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		396371AD2DCB30B80081AD58 /* InterstitialAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396371AC2DCB30A20081AD58 /* InterstitialAdVC.swift */; };
 		7EE99EA02DB9AF6E006C357E /* Think4wardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99E9F2DB9AF6E006C357E /* Think4wardApp.swift */; };
 		7EE99EA42DB9AF70006C357E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE99EA32DB9AF70006C357E /* Assets.xcassets */; };
 		7EE99EA72DB9AF70006C357E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE99EA62DB9AF70006C357E /* Preview Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		36C37A8D0A5CD6BC2D7CB089 /* Pods-Think4ward.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think4ward.release.xcconfig"; path = "Target Support Files/Pods-Think4ward/Pods-Think4ward.release.xcconfig"; sourceTree = "<group>"; };
+		396371AC2DCB30A20081AD58 /* InterstitialAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdVC.swift; sourceTree = "<group>"; };
 		5DF9E9577534D72500394C0F /* Pods-Think4ward.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think4ward.debug.xcconfig"; path = "Target Support Files/Pods-Think4ward/Pods-Think4ward.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE99E9C2DB9AF6E006C357E /* Think4ward.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Think4ward.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EE99E9F2DB9AF6E006C357E /* Think4wardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Think4wardApp.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			children = (
 				7EE99E9F2DB9AF6E006C357E /* Think4wardApp.swift */,
 				7EE99EB32DB9BAEC006C357E /* DashboardView.swift */,
+				396371AC2DCB30A20081AD58 /* InterstitialAdVC.swift */,
 				7EE99EAD2DB9AF94006C357E /* ConnectFour.swift */,
 				7EE99EAF2DB9B0FE006C357E /* TicTacToe.swift */,
 				7EE99EB52DB9BBA6006C357E /* DotsandBoxes.swift */,
@@ -100,7 +103,6 @@
 				5DF9E9577534D72500394C0F /* Pods-Think4ward.debug.xcconfig */,
 				36C37A8D0A5CD6BC2D7CB089 /* Pods-Think4ward.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -203,9 +205,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -241,6 +247,7 @@
 			files = (
 				7EE99EAE2DB9AF94006C357E /* ConnectFour.swift in Sources */,
 				7EE99EB02DB9B0FE006C357E /* TicTacToe.swift in Sources */,
+				396371AD2DCB30B80081AD58 /* InterstitialAdVC.swift in Sources */,
 				7EE99EA02DB9AF6E006C357E /* Think4wardApp.swift in Sources */,
 				7EE99EB42DB9BAEC006C357E /* DashboardView.swift in Sources */,
 				7EE99EB62DB9BBA6006C357E /* DotsandBoxes.swift in Sources */,
