@@ -16,7 +16,7 @@
 		7EE99EB42DB9BAEC006C357E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99EB32DB9BAEC006C357E /* DashboardView.swift */; };
 		7EE99EB62DB9BBA6006C357E /* DotsandBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99EB52DB9BBA6006C357E /* DotsandBoxes.swift */; };
 		7EE99EB82DB9BBCF006C357E /* Gomoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99EB72DB9BBCF006C357E /* Gomoku.swift */; };
-		C2AD6C41637AF8E49B62040D /* libPods-Think4ward.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFD86D1C044E7B318C8A8E5E /* libPods-Think4ward.a */; };
+		BB16D0B41477AD595B39803F /* Pods_Think4ward.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 814859ACC4C90D0130457D81 /* Pods_Think4ward.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +32,7 @@
 		7EE99EB32DB9BAEC006C357E /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7EE99EB52DB9BBA6006C357E /* DotsandBoxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsandBoxes.swift; sourceTree = "<group>"; };
 		7EE99EB72DB9BBCF006C357E /* Gomoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gomoku.swift; sourceTree = "<group>"; };
-		EFD86D1C044E7B318C8A8E5E /* libPods-Think4ward.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Think4ward.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		814859ACC4C90D0130457D81 /* Pods_Think4ward.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think4ward.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2AD6C41637AF8E49B62040D /* libPods-Think4ward.a in Frameworks */,
+				BB16D0B41477AD595B39803F /* Pods_Think4ward.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,7 +50,7 @@
 		69E8DBFF9F6EEA2D8B5F170C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EFD86D1C044E7B318C8A8E5E /* libPods-Think4ward.a */,
+				814859ACC4C90D0130457D81 /* Pods_Think4ward.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,7 +119,6 @@
 				7EE99E992DB9AF6E006C357E /* Frameworks */,
 				7EE99E9A2DB9AF6E006C357E /* Resources */,
 				E40ABD491C0D1C80B9D3AA41 /* [CP] Embed Pods Frameworks */,
-				7C849B40C729B6D7A5A16348 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -196,23 +195,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7C849B40C729B6D7A5A16348 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E40ABD491C0D1C80B9D3AA41 /* [CP] Embed Pods Frameworks */ = {
