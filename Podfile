@@ -1,5 +1,5 @@
 platform :ios, '15.0'
-use_frameworks!  # 使用动态框架代替静态库
+use_modular_headers!  # 添加这一行，替换 use_frameworks!
 
 target 'Think4ward' do
   pod 'AppLovinSDK', '13.1.0'  # 指定版本为 13.1.0
