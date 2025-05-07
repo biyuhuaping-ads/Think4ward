@@ -387,10 +387,6 @@ struct DashboardView: View {
     @State private var animateGradient = false
     @State private var isNavigateToGames = false
     
-    init() {
-        InterstitialAdVC.shared
-    }
-    
     var body: some View {
         NavigationView {
             ZStack {
@@ -404,6 +400,7 @@ struct DashboardView: View {
                 .onAppear {
                     withAnimation(.linear(duration: 5.0).repeatForever(autoreverses: true)) {
                         animateGradient.toggle()
+                        InterstitialAdVC.shared.createInterstitialAd()
                     }
                 }
                 
