@@ -3,7 +3,7 @@ platform :ios, '15.0'
 target 'Think4ward' do
   
   use_frameworks!
-#  use_modular_headers!
+
   #  post_install do |pi|
 #    pi.pods_project.targets.each do |t|
 #      t.build_configurations.each do |config|
@@ -30,10 +30,10 @@ target 'Think4ward' do
   #  pod 'FirebaseFirestore','10.14.0'
   
   pod 'AppLovinSDK', '13.1.0'  # 指定版本为 13.1.0
-  pod 'Firebase/Analytics', :modular_headers => true
-  pod 'Firebase/Auth', :modular_headers => true
-  pod 'Firebase/Core', :modular_headers => true
-  pod 'Firebase/Firestore', :modular_headers => true
+  pod 'Firebase/Analytics'#, :modular_headers => true
+  pod 'Firebase/Auth'#, :modular_headers => true
+  pod 'Firebase/Core'#, :modular_headers => true
+  pod 'Firebase/Firestore'#, :modular_headers => true
 end
 
 post_install do |installer|
