@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		396371AD2DCB30B80081AD58 /* InterstitialAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396371AC2DCB30A20081AD58 /* InterstitialAdVC.swift */; };
 		39B47FA72DCB7DBB0077B1F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B47FA62DCB7DBB0077B1F9 /* GoogleService-Info.plist */; };
+		5682052F442CA9B426760E78 /* Pods_Think4ward.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E9F5B088D8F29475F8253F /* Pods_Think4ward.framework */; };
 		7EE99EA02DB9AF6E006C357E /* Think4wardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99E9F2DB9AF6E006C357E /* Think4wardApp.swift */; };
 		7EE99EA42DB9AF70006C357E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE99EA32DB9AF70006C357E /* Assets.xcassets */; };
 		7EE99EA72DB9AF70006C357E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EE99EA62DB9AF70006C357E /* Preview Assets.xcassets */; };
@@ -17,7 +18,6 @@
 		7EE99EB42DB9BAEC006C357E /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99EB32DB9BAEC006C357E /* DashboardView.swift */; };
 		7EE99EB62DB9BBA6006C357E /* DotsandBoxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99EB52DB9BBA6006C357E /* DotsandBoxes.swift */; };
 		7EE99EB82DB9BBCF006C357E /* Gomoku.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE99EB72DB9BBCF006C357E /* Gomoku.swift */; };
-		B99D197BC0F06BC6F2E3D44D /* Pods_Think4ward.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFA15CBCEEDA338AC13194AC /* Pods_Think4ward.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		7EE99EB32DB9BAEC006C357E /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		7EE99EB52DB9BBA6006C357E /* DotsandBoxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotsandBoxes.swift; sourceTree = "<group>"; };
 		7EE99EB72DB9BBCF006C357E /* Gomoku.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gomoku.swift; sourceTree = "<group>"; };
-		DFA15CBCEEDA338AC13194AC /* Pods_Think4ward.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think4ward.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E9F5B088D8F29475F8253F /* Pods_Think4ward.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Think4ward.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B99D197BC0F06BC6F2E3D44D /* Pods_Think4ward.framework in Frameworks */,
+				5682052F442CA9B426760E78 /* Pods_Think4ward.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,7 +52,7 @@
 		69E8DBFF9F6EEA2D8B5F170C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DFA15CBCEEDA338AC13194AC /* Pods_Think4ward.framework */,
+				98E9F5B088D8F29475F8253F /* Pods_Think4ward.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -209,13 +209,9 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -407,7 +403,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				OTHER_SWIFT_FLAGS = "$(inherited) -D";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Think4ward;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

@@ -11,6 +11,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 
 @main
 struct Think4wardApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
     init() {
         let initConfig = ALSdkInitializationConfiguration(sdkKey: "LNR7IqQoTN_ruXr55ZWa_0SoWtyL65IFWSneUVVlGsv6RXs6idmUqtaf7AilM7UX_9NOyitGTFk_0prZ75JyhZ") { builder in
             builder.mediationProvider = ALMediationProviderMAX
