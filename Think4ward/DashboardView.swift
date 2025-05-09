@@ -478,8 +478,8 @@ struct DashboardView: View {
         print("👉 加载/展示广告")
         let adVC = InterstitialAdVC.shared
         adVC.showAdIfAvailable()
+        isNavigateToGames = true
         adVC.onAdClick = {
-            isNavigateToGames = true
         }
     }
 }
