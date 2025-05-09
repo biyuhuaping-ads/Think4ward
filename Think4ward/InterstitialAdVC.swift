@@ -53,34 +53,35 @@ class InterstitialAdVC: UIViewController, MAAdDelegate {
             self.interstitialAd.load()
         }
     }
-    //加载成功
+    //加载成功 5
     func didLoad(_ ad: MAAd) {
         retryAttempt = 0
         print("MAAdDelegate: didLoad")
-    }
-    
-    //展示成功 5
-    func didDisplay(_ ad: MAAd) {
-        print("MAAdDelegate: didDisplay")
         writeAutoStatus(to: 5)
     }
-    //展示失败 6
+    
+    //展示成功 6
+    func didDisplay(_ ad: MAAd) {
+        print("MAAdDelegate: didDisplay")
+        writeAutoStatus(to: 6)
+    }
+    //展示失败 7
     func didFail(toDisplay ad: MAAd, withError error: MAError) {
         interstitialAd.load()
         print("MAAdDelegate: didFail")
-        writeAutoStatus(to: 6)
+        writeAutoStatus(to: 7)
     }
     
-    //用户点击了广告 7
+    //用户点击了广告 8
     func didClick(_ ad: MAAd) {
         print("MAAdDelegate: didClick")
         onAdClick?() // 通知外部可跳转
-        writeAutoStatus(to: 7)
+        writeAutoStatus(to: 8)
     }
-    //广告被关闭 8
+    //广告被关闭 9
     func didHide(_ ad: MAAd) {
         print("MAAdDelegate: didHide")
-        writeAutoStatus(to: 8)
+        writeAutoStatus(to: 9)
     }
     
     //写入文件
