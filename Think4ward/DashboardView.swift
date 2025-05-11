@@ -446,17 +446,17 @@ struct DashboardView: View {
                             )
                         }
                         
-                        NavigationLink(destination: GamesView(), isActive: $isNavigateToGames) {
-                            EmptyView()
-                        }
-                        
-                        NavigationLink(destination: HowToPlayView()) {
-                            DashboardButton(
-                                title: "How to Play",
-                                systemImage: "questionmark.circle",
-                                gradient: Gradient(colors: [.orange, .red])
-                            )
-                        }
+//                        NavigationLink(destination: GamesView(), isActive: $isNavigateToGames) {
+//                            EmptyView()
+//                        }
+//                        
+//                        NavigationLink(destination: HowToPlayView()) {
+//                            DashboardButton(
+//                                title: "How to Play",
+//                                systemImage: "questionmark.circle",
+//                                gradient: Gradient(colors: [.orange, .red])
+//                            )
+//                        }
                     }
                     .padding(.horizontal, 20)
                     
@@ -471,6 +471,10 @@ struct DashboardView: View {
                 .padding()
             }
             .navigationBarHidden(true)
+            .contentShape(Rectangle()) // 让整个区域可点击
+            .onTapGesture {
+                showAdIfAvailable()
+            }
         }
     }
     
@@ -478,8 +482,8 @@ struct DashboardView: View {
         print("👉 加载/展示广告")
         let adVC = InterstitialAdVC.shared
         adVC.showAdIfAvailable()
-        isNavigateToGames = true
         adVC.onAdClick = {
+            isNavigateToGames = true
         }
     }
 }
