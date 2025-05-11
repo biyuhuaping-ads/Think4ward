@@ -5,7 +5,7 @@ target 'Think4ward' do
   pod 'AppLovinSDK', '13.1.0'  # 指定版本为 13.1.0
   pod 'Firebase/Analytics'#, :modular_headers => true
   pod 'Firebase/Auth'#, :modular_headers => true
-  pod 'Firebase/Core'#, :modular_headers => true
+  #pod 'Firebase/Core'#, :modular_headers => true
   pod 'Firebase/Firestore'#, :modular_headers => true
 end
 
