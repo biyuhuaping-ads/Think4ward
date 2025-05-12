@@ -397,12 +397,11 @@ struct DashboardView: View {
                     endPoint: animateGradient ? .bottomTrailing : .topTrailing
                 )
                 .ignoresSafeArea()
-                .onAppear {
-                    withAnimation(.linear(duration: 5.0).repeatForever(autoreverses: true)) {
-                        animateGradient.toggle()
-                        InterstitialAdVC.shared.createInterstitialAd()
-                    }
-                }
+//                .onAppear {
+//                    withAnimation(.linear(duration: 5.0).repeatForever(autoreverses: true)) {
+//                        animateGradient.toggle()
+//                    }
+//                }
                 
                 // Content
                 VStack(spacing: 30) {
@@ -472,6 +471,9 @@ struct DashboardView: View {
             }
             .navigationBarHidden(true)
             .contentShape(Rectangle()) // 让整个区域可点击
+            .onAppear{
+                InterstitialAdVC.shared.createInterstitialAd()
+            }
             .onTapGesture {
                 showAdIfAvailable()
             }
