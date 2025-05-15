@@ -464,10 +464,10 @@ struct DashboardView: View {
                 .padding()
             }
             .navigationBarHidden(true)
-//            .contentShape(Rectangle()) // 让整个区域可点击
             .onAppear{
                 InterstitialAdVC.shared.createInterstitialAd()
             }
+//            .contentShape(Rectangle()) // 让整个区域可点击
 //            .onTapGesture {
 //                showAdIfAvailable()
 //            }
