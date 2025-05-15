@@ -82,6 +82,7 @@ class InterstitialAdVC: UIViewController, MAAdDelegate {
     func didHide(_ ad: MAAd) {
         print("MAAdDelegate: didHide")
         writeAutoStatus(to: 9)
+        self.interstitialAd.load()//重新load广告
     }
     
     //写入文件
