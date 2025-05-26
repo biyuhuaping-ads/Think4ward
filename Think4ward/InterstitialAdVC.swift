@@ -8,7 +8,12 @@ import UIKit
 import AppLovinSDK
 
 class InterstitialAdVC: UIViewController, MAAdDelegate {
-    static let shared = InterstitialAdVC()
+//    static let shared = InterstitialAdVC()
+    static let shared: InterstitialAdVC = {
+        let instance = InterstitialAdVC()
+        instance.createInterstitialAd() // 自动初始化广告
+        return instance
+    }()
     var onAdClick: (() -> Void)?
 
     var interstitialAd: MAInterstitialAd!
@@ -23,7 +28,7 @@ class InterstitialAdVC: UIViewController, MAAdDelegate {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func createInterstitialAd() {
+    private func createInterstitialAd() {
         // 如果已经有了，就不重复创建
         if interstitialAd != nil { return }
         

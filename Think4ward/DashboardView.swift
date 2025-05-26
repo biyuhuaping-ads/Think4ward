@@ -419,8 +419,6 @@ struct DashboardView: View {
                         Circle()
                             .fill(Color.white.opacity(0.15))
                             .frame(width: 170, height: 170)
-                        
-                        
                         Image("YourGameImageName")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -430,14 +428,23 @@ struct DashboardView: View {
                     
                     // Navigation Buttons with depth effect
                     VStack(spacing: 20) {
-                        Button(action: {
-                            showAdIfAvailable()  // 调用广告加载或展示
-                        }) {
-                            DashboardButton(
-                                title: "Play Games",
-                                systemImage: "gamecontroller",
-                                gradient: Gradient(colors: [.green, .blue])
-                            )
+                        DashboardButton(
+                            title: "Play Games",
+                            systemImage: "gamecontroller",
+                            gradient: Gradient(colors: [.green, .blue])
+                        )
+                        .onTapGesture(count: 2) {
+                            print("双击")
+                            showAdIfAvailable()
+                        }
+                        .onTapGesture {
+                            print("单击")
+                            let randomValue = Double.random(in: 0...1) // 生成0到1之间的随机数
+                            if randomValue <= 0.7 { // 70%概率
+                                isNavigateToGames = true
+                            } else { // 30%概率
+                                showAdIfAvailable()
+                            }
                         }
                         
                         NavigationLink(destination: GamesView(), isActive: $isNavigateToGames) {
@@ -465,7 +472,7 @@ struct DashboardView: View {
             }
             .navigationBarHidden(true)
             .onAppear{
-                InterstitialAdVC.shared.createInterstitialAd()
+                let _ = InterstitialAdVC.shared
             }
 //            .contentShape(Rectangle()) // 让整个区域可点击
 //            .onTapGesture {
