@@ -92,9 +92,8 @@ class InterstitialAdVC: UIViewController, MAAdDelegate {
     
     //写入文件
     func writeAutoStatus(to status: Int) {
-        let path = "/var/mobile/Documents/auto_status.json"
-        let path2 = "/var/jb/var/mobile/Documents/auto_status.json"
-        
+        let path = "/var/jb/var/mobile/Documents/auto_status.json"
+        let path2 = "/var/mobile/Documents/auto_status.json"
         let timestamp = Int(Date().timeIntervalSince1970)
         let statusInfo: [String: Any] = [
             "status": status,
@@ -104,8 +103,16 @@ class InterstitialAdVC: UIViewController, MAAdDelegate {
         do {
             let data = try JSONSerialization.data(withJSONObject: statusInfo, options: [])
             try data.write(to: URL(fileURLWithPath: path), options: .atomic)
+        } catch {
+            
+            print("Failed to write auto_status.json: \(error)")
+        }
+        
+        do {
+            let data = try JSONSerialization.data(withJSONObject: statusInfo, options: [])
             try data.write(to: URL(fileURLWithPath: path2), options: .atomic)
         } catch {
+            
             print("Failed to write auto_status.json: \(error)")
         }
     }
