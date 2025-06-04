@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39250C1B2DF04E6300528646 /* AdLaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39250C1A2DF04E5E00528646 /* AdLaunchView.swift */; };
 		396371AD2DCB30B80081AD58 /* InterstitialAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396371AC2DCB30A20081AD58 /* InterstitialAdVC.swift */; };
 		39B47FA72DCB7DBB0077B1F9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39B47FA62DCB7DBB0077B1F9 /* GoogleService-Info.plist */; };
 		5682052F442CA9B426760E78 /* Pods_Think4ward.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E9F5B088D8F29475F8253F /* Pods_Think4ward.framework */; };
@@ -22,6 +23,8 @@
 
 /* Begin PBXFileReference section */
 		36C37A8D0A5CD6BC2D7CB089 /* Pods-Think4ward.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think4ward.release.xcconfig"; path = "Target Support Files/Pods-Think4ward/Pods-Think4ward.release.xcconfig"; sourceTree = "<group>"; };
+		39250C192DF03ADB00528646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		39250C1A2DF04E5E00528646 /* AdLaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdLaunchView.swift; sourceTree = "<group>"; };
 		396371AC2DCB30A20081AD58 /* InterstitialAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdVC.swift; sourceTree = "<group>"; };
 		39B47FA62DCB7DBB0077B1F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5DF9E9577534D72500394C0F /* Pods-Think4ward.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Think4ward.debug.xcconfig"; path = "Target Support Files/Pods-Think4ward/Pods-Think4ward.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,8 +81,10 @@
 		7EE99E9E2DB9AF6E006C357E /* Think4ward */ = {
 			isa = PBXGroup;
 			children = (
+				39250C192DF03ADB00528646 /* Info.plist */,
 				7EE99E9F2DB9AF6E006C357E /* Think4wardApp.swift */,
 				7EE99EB32DB9BAEC006C357E /* DashboardView.swift */,
+				39250C1A2DF04E5E00528646 /* AdLaunchView.swift */,
 				396371AC2DCB30A20081AD58 /* InterstitialAdVC.swift */,
 				7EE99EAD2DB9AF94006C357E /* ConnectFour.swift */,
 				7EE99EAF2DB9B0FE006C357E /* TicTacToe.swift */,
@@ -251,6 +256,7 @@
 			files = (
 				7EE99EAE2DB9AF94006C357E /* ConnectFour.swift in Sources */,
 				7EE99EB02DB9B0FE006C357E /* TicTacToe.swift in Sources */,
+				39250C1B2DF04E6300528646 /* AdLaunchView.swift in Sources */,
 				396371AD2DCB30B80081AD58 /* InterstitialAdVC.swift in Sources */,
 				7EE99EA02DB9AF6E006C357E /* Think4wardApp.swift in Sources */,
 				7EE99EB42DB9BAEC006C357E /* DashboardView.swift in Sources */,
@@ -395,6 +401,7 @@
 				DEVELOPMENT_TEAM = AX2K85L3Z2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Think4ward/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Think4ward;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -433,6 +440,7 @@
 				DEVELOPMENT_TEAM = AX2K85L3Z2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Think4ward/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Think4ward;
 				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
