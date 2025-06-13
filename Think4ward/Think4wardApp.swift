@@ -22,6 +22,7 @@ struct Think4wardApp: App {
         ALSdk.shared().initialize(with: initConfig) { sdkConfig in
             print("AppLovin SDK initialized.")
             // 可以在这里预加载广告，例如 Interstitials
+            let _ = InterstitialAdVC.shared
         }
     }
     

